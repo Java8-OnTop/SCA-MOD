@@ -1,7 +1,6 @@
 package com.xss6.sca.event.processor;
 
 import org.jetbrains.annotations.NotNull;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;

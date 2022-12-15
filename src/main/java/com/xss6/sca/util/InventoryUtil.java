@@ -1,4 +1,4 @@
-package com.xss6.sca.utils;
+package com.xss6.sca.util;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.EnchantmentHelper;

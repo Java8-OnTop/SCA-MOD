@@ -1,4 +1,4 @@
-package com.xss6.sca.events.processor;
+package com.xss6.sca.event.processor;
 
 public enum EventPriority {
     HIGH,
