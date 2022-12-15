@@ -57,4 +57,11 @@ public class Events implements Globals {
             GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
         }
     }
+    
+    @SubscribeEvent
+    public void onTick(TickEvent.ClientTickEvent event) {
+        if (!nullCheck()) {
+            WurstplusThree.HACKS.onTick();
+        }
+    }
 }
