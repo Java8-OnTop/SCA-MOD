@@ -61,7 +61,7 @@ public class Events implements Globals {
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent event) {
         if (!nullCheck()) {
-            WurstplusThree.HACKS.onTick();
+            ScaMod.HACKS.onTick();
         }
     }
 }
