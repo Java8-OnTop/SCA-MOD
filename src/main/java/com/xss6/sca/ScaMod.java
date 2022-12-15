@@ -8,6 +8,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.xss6.sca.event.processor.EventProcessor;
 import com.xss6.sca.networking.proxy.ScaProxy;
+import com.xss6.sca.event.Events;
+import com.xss6.sca.setting.Settings;
 
 import org.lwjgl.opengl.Display;
 import org.apache.logging.log4j.LogManager;
@@ -17,13 +19,21 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = ScaMod.MODID, name = ScaMod.NAME, version = ScaMod.VERSION)
 public class ScaMod
 {
+    //modinfo
     public static final String MODID = "sca";
     public static final String NAME = "SCA MOD";
     public static final String VERSION = "0.0.1";
 
+    //events
     public static EventProcessor EVENT_PROCESSOR;
+    public static Events EVENTS;
+    
+    //others
     public static ScaProxy PROXY;
     public static final Logger LOGGER = LogManager.getLogger(MODID);
+
+    //settings
+    public static Settings SETTINGS;
     
     @Mod.Instance
     public static ScaMod INSTANCE;
