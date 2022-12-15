@@ -10,8 +10,11 @@ import com.xss6.sca.event.processor.EventProcessor;
 import com.xss6.sca.networking.proxy.ScaProxy;
 import com.xss6.sca.event.Events;
 import com.xss6.sca.setting.Settings;
+import com.xss6.sca.hack.Hacks;
+import com.xss6.sca.manager.PositionManager;
 
 import org.lwjgl.opengl.Display;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,6 +38,13 @@ public class ScaMod
     //settings
     public static Settings SETTINGS;
     
+    //hacks
+    public static Hacks HACKS;
+    
+    
+    //managers
+    public static PositionManager POS_MANAGER;
+    
     @Mod.Instance
     public static ScaMod INSTANCE;
     Minecraft mc = Minecraft.getMinecraft();
@@ -56,10 +66,18 @@ public class ScaMod
     public void load()
     {
     	EVENT_PROCESSOR = new EventProcessor();
+        EVENTS = new Events();
+        HACKS = new Hacks();
+        this.loadManagers();
     }
     
     public void unLoad()
     {
     	LOGGER.info(NAME + " : " + VERSION + " has been unloaded!");
+    }
+    
+    void loadManagers()
+    {
+        POS_MANAGER = new PositionManager();
     }
 }
