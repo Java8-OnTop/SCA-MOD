@@ -16,6 +16,8 @@ import java.util.ArrayList;
  * @since 02/06/2021
  */
 
+// used from Wurst
+
 public class Gui extends JFrame {
 
     private static final Path logPath = Paths.get("logs/latest.log");
@@ -28,7 +30,7 @@ public class Gui extends JFrame {
     }
 
     public void draw() {
-        JFrame frame = new JFrame("Wurst + 3 Log viewer");
+        JFrame frame = new JFrame("SCA Log Viewer");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         log = getLog();
 
