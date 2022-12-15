@@ -6,7 +6,7 @@ import com.xss6.sca.event.events.Render2DEvent;
 import com.xss6.sca.event.events.Render3DEvent;
 import com.xss6.sca.setting.Setting;
 import com.xss6.sca.util.ClientMessage;
-import me.travis.wurstplusthree.util.Globals;
+import com.xss6.sca.util.Globals;
 import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.input.Keyboard;
 
