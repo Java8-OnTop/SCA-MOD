@@ -44,6 +44,7 @@ public class ScaMod
     
     //managers
     public static PositionManager POS_MANAGER;
+    public static GuiFont GUI_FONT_MANAGER;
     
     @Mod.Instance
     public static ScaMod INSTANCE;

@@ -186,7 +186,7 @@ public class Hack implements Globals {
         return settings;
     }
 
-    public String getFullArrayString() {
+    public static String getFullArrayString() {
         return this.name + (this.getDisplayInfo() != null ? ChatFormatting.GOLD + "[" + this.getDisplayInfo().toUpperCase() + "]" : "");
     }
 
@@ -201,7 +201,8 @@ public class Hack implements Globals {
 
     public enum Category {
         CLIENT("Client"),
-        HUD("Hud");
+        HUD("Hud"),
+        CHAT("Chat");
 
         private final String name;
 

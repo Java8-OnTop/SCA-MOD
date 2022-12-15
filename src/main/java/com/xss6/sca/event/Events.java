@@ -41,12 +41,12 @@ public class Events implements Globals {
 
     public Events() {
         MinecraftForge.EVENT_BUS.register(this);
-        WurstplusThree.EVENT_PROCESSOR.addEventListener(this);
+        ScaMod.EVENT_PROCESSOR.addEventListener(this);
     }
 
     public void unload() {
         MinecraftForge.EVENT_BUS.unregister(this);
-        WurstplusThree.EVENT_PROCESSOR.removeEventListener(this);
+        ScaMod.EVENT_PROCESSOR.removeEventListener(this);
     }
   
     @SubscribeEvent(priority = EventPriority.LOW)
