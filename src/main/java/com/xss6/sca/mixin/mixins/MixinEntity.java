@@ -24,49 +24,71 @@ import java.util.Random;
 public abstract class MixinEntity {
     @Shadow
     public double posX;
+    
     @Shadow
     public double posY;
+    
     @Shadow
     public double posZ;
+    
     @Shadow
     public double motionX;
+    
     @Shadow
     public double motionY;
+    
     @Shadow
     public double motionZ;
+    
     @Shadow
     public float rotationYaw;
+    
     @Shadow
     public float rotationPitch;
+    
     @Shadow
     public boolean onGround;
+    
     @Shadow
     public World world;
+    
     @Shadow
     @Final
     private double[] pistonDeltas;
+    
     @Shadow
     private long pistonDeltasGameTime;
+    
     @Shadow
     protected boolean isInWeb;
+    
     @Shadow
     public float stepHeight;
+    
     @Shadow
     public boolean collidedHorizontally;
+    
     @Shadow
     public boolean collidedVertically;
+    
     @Shadow
     public boolean collided;
+    
     @Shadow
     public float distanceWalkedModified;
+    
     @Shadow
     public float distanceWalkedOnStepModified;
+    
     @Shadow
     private int fire;
+    
     @Shadow
     private int nextStepDistance;
+    
     @Shadow
     private float nextFlap;
+    
     @Shadow
     protected Random rand;
 
