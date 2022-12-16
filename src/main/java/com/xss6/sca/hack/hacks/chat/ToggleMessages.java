@@ -20,6 +20,7 @@ public class ToggleMessages extends Hack{
       Hack.getHackByName("Toggle Messages").Disable();
     }
     else {
+      Hack.getHackByName("Toggle Messages").Enable();
     }
   }
 }
