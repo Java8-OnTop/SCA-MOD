@@ -48,38 +48,49 @@ public final class CPacketHandler {
         if(event.getPacket() instanceof CPacketAnimation){
             packet += ":Animation:" + ((CPacketAnimation) event.getPacket()).getHand();
         }
+        
         else if(event.getPacket() instanceof CPacketPlayer){
             CPacketPlayer p = event.getPacket();
             packet += ":Player:" + p.moving + ":" + p.onGround + ":" + p.rotating + ":" + p.pitch + ":" + p.yaw + ":" +p.x + ":" + p.y + ":" + p.z;
         }
+        
         else if(event.getPacket() instanceof CPacketChatMessage){
             packet += ":ChatMessage:" + ((CPacketChatMessage) event.getPacket()).message;
         }
+        
         else if(event.getPacket() instanceof CPacketConfirmTeleport){
             packet += ":ConfirmTeleport:" + ((CPacketConfirmTeleport) event.getPacket()).getTeleportId();
         }
+        
         else if(event.getPacket() instanceof CPacketClientStatus){
             packet += ":ClientStatus:" + ((CPacketClientStatus) event.getPacket()).getStatus();
         }
+        
         else if(event.getPacket() instanceof CPacketClickWindow){
             CPacketClickWindow p = event.getPacket();
             packet += ":ClickWindow:" + p.getWindowId() + ":" + p.getClickType() + ":" + p.getClickedItem().getDisplayName() + ":" + p.getActionNumber() + ":" + p.getSlotId() + ":" + p.getUsedButton();
         }
+        
         else if(event.getPacket() instanceof CPacketCloseWindow){
             packet += ":CloseWindow:" + ((CPacketCloseWindow) event.getPacket()).windowId;
         }
+        
         else if(event.getPacket() instanceof CPacketConfirmTransaction){
             packet += ":ConfirmTransaction:" + ((CPacketConfirmTransaction) event.getPacket()).getWindowId() + ":" + ((CPacketConfirmTransaction) event.getPacket()).getUid();
         }
+        
         else if(event.getPacket() instanceof CPacketLoginStart){
             packet += ":LoginStart:" + ((CPacketLoginStart) event.getPacket()).getProfile().getName() + ":" + ((CPacketLoginStart) event.getPacket()).getProfile().getId();
         }
+        
         else if(event.getPacket() instanceof C00Handshake){
             packet += ":Handshake:" + ((C00Handshake) event.getPacket()).hasFMLMarker() + ":" + ((C00Handshake) event.getPacket()).getRequestedState();
         }
+        
         else if(event.getPacket() instanceof CPacketEncryptionResponse){
             packet += ":EncryptionResponse";
         }
+        
         else if(event.getPacket() instanceof CPacketKeepAlive){
             packet += ":KeepAlive";
         }
